@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Analog Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="clock">
+      <!-- Hands -->
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+
+      <!-- Numbers -->
+      <span style="--i:1">1</span>
+      <span style="--i:2">2</span>
+      <span style="--i:3">3</span>
+      <span style="--i:4">4</span>
+      <span style="--i:5">5</span>
+      <span style="--i:6">6</span>
+      <span style="--i:7">7</span>
+      <span style="--i:8">8</span>
+      <span style="--i:9">9</span>
+      <span style="--i:10">10</span>
+      <span style="--i:11">11</span>
+      <span style="--i:12">12</span>
+    </div>
+
+    <!-- Digital time -->
+    <div class="digital-time" id="digitalTime"></div>
+
+    <!-- HR/MIN/SEC display -->
+    <div class="time-values">
+      <span id="hrValue">HR: 00</span> |
+      <span id="minValue">MIN: 00</span> |
+      <span id="secValue">SEC: 00</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
