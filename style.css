@@ -7,28 +7,49 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #1e1e1e;
+  display: flex; /* enables flexbox layout */
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  min-height: 100vh; /* full viewport height */
+  background: #1e1e1e; /* fallback color */
+  background-image: url("interior.jpg"); /* your background image */
+  background-size: cover; /* image fills the screen */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  margin: 0; /* removes default body margin */
+  
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: -1; /* behind the content */
+}
+
 
 .container {
   text-align: center;
-}
 
+}
 .clock {
   width: 320px;
   height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #2c2c2c 0%, #121212 100%);
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8),
-              inset 0 0 15px rgba(255, 255, 255, 0.05);
+  border-radius: 50%; /* Makes it a perfect circle */
+  background: radial-gradient(circle, #2c2c2c 0%, #121212 100%); /* Gradient base */
+  border: 4px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 
+    0 0 30px rgba(0, 0, 0, 0.8), /* Outer shadow */
+    inset 0 0 15px rgba(255, 255, 255, 0.05); /* Inner soft glow */
   position: relative;
   margin: 20px auto;
+  background-image: url(wallpapersden.jpg); /* Adds image background */
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
 }
+
 
 /* Clock numbers */
 .clock span {
